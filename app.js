@@ -3,7 +3,6 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const path = require("path");
 
 const authRouter = require("./routes/auth");
 const userRouter = require("./routes/user");

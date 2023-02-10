@@ -28,7 +28,7 @@ exports.formattedUploadedImages = async (req, res, next) => {
 		req.files.map(
 			async file =>
 				await req.body.images.push(
-					`http://localhost:8000/assets/posts/${file.originalname}`
+					`https://instello-api.onrender.com/assets/posts/${file.originalname}`
 				)
 		)
 	);

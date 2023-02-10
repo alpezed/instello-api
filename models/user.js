@@ -130,7 +130,7 @@ userSchema.methods.correctPassword = async function (
 };
 
 userSchema.virtual("photoUrl").get(function () {
-	return `http://localhost:8000/assets/users/${this.photo}`;
+	return `https://instello-api.onrender.com/assets/users/${this.photo}`;
 });
 
 module.exports = mongoose.model("User", userSchema);
