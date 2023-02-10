@@ -116,9 +116,10 @@ userSchema.pre("save", async function (next) {
 });
 
 userSchema.pre(/^find/, function (next) {
-	this.populate({ path: "friends", select: "-__v -updatedAt -photo" }).populate(
-		{ path: "story", options: { sort: { createdAt: -1 } } }
-	);
+	this.populate({ path: "friends", select: "-__v -updatedAt" }).populate({
+		path: "story",
+		options: { sort: { createdAt: -1 } },
+	});
 	next();
 });
 
