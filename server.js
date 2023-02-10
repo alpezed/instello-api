@@ -24,8 +24,6 @@ const io = new Server(server, {
 });
 
 io.on("connection", socket => {
-	console.log("a user connected");
-
 	socket.on("setup", userData => {
 		socket.join(userData.id);
 		socket.emit("connected");
